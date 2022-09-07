@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import episodes from "../data/episodes";
 
 function Podcast() {
@@ -8,17 +9,24 @@ function Podcast() {
 
       <section className="podcast-section">
         {episodes.map((episode) => (
-          <div>
+          <div key={episode.id}>
             <h2>{episode.title}</h2>
-            <p>{episode.subtitle}</p>
-            <iframe
-              src={episode.src}
-              width="100%"
-              frameBorder="0"
-              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-              loading="lazy"
-              title={`${episode.title} ${episode.subtitle}`}
-            />
+            <div className="flex-col">
+              {episode.subEpisode &&
+                episode.subEpisode.map((sub) => (
+                  <Link
+                    to={`/Podcast/${episode.id}/${sub.subId}`}
+                    key={sub.subId}
+                  >
+                    <button
+                      type="button"
+                      className="button-style margin1r0 spotify"
+                    >
+                      {sub.subtitle}
+                    </button>
+                  </Link>
+                ))}
+            </div>
           </div>
         ))}
       </section>

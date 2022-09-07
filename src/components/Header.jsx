@@ -13,7 +13,7 @@ function Burger() {
       <button
         type="button"
         onClick={() => setOpenBurger(!openBurger)}
-        className="mobile no_button"
+        className="mobile no-button"
       >
         <img
           src={burger}

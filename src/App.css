@@ -22,6 +22,7 @@
   box-sizing: border-box;
   background-color: var(--main-bg-color);
   font-family: var(--font-text);
+  color: var(--secondary-bg-color);
 }
 
 h1, h2 {
@@ -42,7 +43,7 @@ section {
   padding: 2rem 0;
 }
 
-.no_button {
+.no-button {
   background-color: transparent;
   border: none;
 }
@@ -90,7 +91,7 @@ section {
   position: relative;
 }
 
-.button_style {
+.button-style {
   border: none;
   box-shadow: var(--box-shadow);
   padding: 1rem;
@@ -117,6 +118,14 @@ section {
   animation: open 0.25s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
+.burger-button {
+    width: 100%;
+    font-size: 2rem;
+    padding: 3rem 1rem;
+    border: none;
+    border-bottom: var(--secondary-bg-color) 1px solid;
+}
+
 @keyframes open {
   0% {
     transform: scale(0);
@@ -130,20 +139,13 @@ section {
   }
 }
 
-.openBurger button {
-  width: 100%;
-  font-size: 3rem;
-  padding: 2rem 1rem;
-  box-shadow: var(--box-shadow);
-  border: none;
-}
-
-button.croix {
+.croix {
   display: flex;
   justify-content: flex-end;
   width: 95%;
   margin-left: 0.5rem;
   box-shadow: none;
+  border: none;
 }
 
 .croix img {
@@ -172,7 +174,15 @@ main {
 }
 
 /********************************************************************* Podcast *********************************************************************/ 
-
+.spotify {
+  background-image:url(./assets/spotify.svg);
+  background-repeat: no-repeat;
+  background-position: 95% 50% ;
+  background-size: 2rem;
+  text-align: start;
+  background-color: var(--secondary-bg-color);
+  color: var(--third-color);
+}
 
 /********************************************************************* CONTACT *********************************************************************/ 
 

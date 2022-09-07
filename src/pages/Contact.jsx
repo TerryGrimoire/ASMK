@@ -13,14 +13,14 @@ function Contact() {
         <div className="flex justify-center margin1r0 ">
           <button
             type="button"
-            className="button_style margin0r1r"
+            className="button-style margin0r1r"
             onClick={() => setRdv(true)}
           >
             Prendre un rdv
           </button>
           <button
             type="button"
-            className="button_style margin0r1r"
+            className="button-style margin0r1r"
             onClick={() => setRdv(false)}
           >
             Envoyer un email
