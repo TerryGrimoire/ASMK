@@ -7,6 +7,7 @@ import Podcast from "./pages/Podcast";
 import Fans from "./pages/Fans";
 import Contact from "./pages/Contact";
 import Mentions from "./pages/Mentions";
+import Episode from "./pages/Episode";
 
 import "./App.css";
 
@@ -17,6 +18,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Podcast" element={<Podcast />} />
+        <Route path="/Podcast/:id/:subId" element={<Episode />} />
         <Route path="/Fans" element={<Fans />} />
         <Route path="/Contact" element={<Contact />} />
         <Route path="/Mentions" element={<Mentions />} />
