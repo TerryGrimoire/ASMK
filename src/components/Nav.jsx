@@ -17,9 +17,14 @@ function Nav({ setOpenBurger }) {
           Accueil
         </button>
       </Link>
-      <Link to="/Page1">
+      <Link to="/Podcasts">
         <button type="button" onClick={() => setOpenBurger(false)}>
-          Page1
+          Podcasts
+        </button>
+      </Link>
+      <Link to="/Fans">
+        <button type="button" onClick={() => setOpenBurger(false)}>
+          Allé di partou
         </button>
       </Link>
       <Link to="/Contact">

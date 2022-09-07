@@ -7,7 +7,7 @@ function Contact() {
   }, []);
   const [rdv, setRdv] = useState(true);
   return (
-    <div className="flex flex-col align-center">
+    <main className="flex flex-col align-center">
       <h2>Nous joindre</h2>
       <section>
         <div className="flex justify-center margin1r0 ">
@@ -36,7 +36,7 @@ function Contact() {
           <Form />
         )}
       </section>
-    </div>
+    </main>
   );
 }
 

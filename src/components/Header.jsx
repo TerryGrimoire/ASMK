@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Nav from "./Nav";
 import Navbar from "./Navbar";
 import burger from "../assets/menu.png";
+import logo from "../assets/logo.png";
 
 function Burger() {
   const [openBurger, setOpenBurger] = useState(false);
@@ -19,7 +20,13 @@ function Burger() {
           alt="menu de navigation sur le site internet - trois lignes de navigation"
         />
       </button>
-      <Link to="/">LOGO</Link>
+      <Link to="/">
+        <img
+          src={logo}
+          alt="logo Atas Sintir Met Kask - ile de la reunion avec un casque en bas"
+          className="logo"
+        />
+      </Link>
       {openBurger && <Nav setOpenBurger={setOpenBurger} />}
       <div className="desktop">
         <Navbar setOpenBurger={setOpenBurger} />
