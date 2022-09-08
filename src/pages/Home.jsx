@@ -1,5 +1,7 @@
 import React from "react";
 import logo from "../assets/logo.png";
+import facebook from "../assets/facebook.svg";
+import instagram from "../assets/instagram.svg";
 
 export default function Home() {
   return (
@@ -19,12 +21,44 @@ export default function Home() {
         d’aujourd’hui et à aller à la rencontre de celles et ceux qui feront la
         Réunion de demain.
       </p>
-      <a href="https://www.instagram.com/atas_sintir_met_kask/">
-        Instagram: @atas_sintir_met_kask{" "}
+      <a
+        className="flex align-center justify-start margin1r0"
+        href="https://www.instagram.com/atas_sintir_met_kask/"
+      >
+        <img src={instagram} alt="instagram" className="social-media" />
+        <p>@atas_sintir_met_kask</p>
       </a>
-      <a href="https://www.facebook.com/podcastasmk">
-        Facebook : Atas Sintir Met Kask
+      <a
+        className="flex align-center justify-start margin1r0"
+        href="https://www.facebook.com/podcastasmk"
+      >
+        <img src={facebook} alt="facebook" className="social-media" />
+        <p>Atas Sintir Met Kask</p>
       </a>
+
+      <article className="center flex-col">
+        <h2 className="center">Chloé Baillif</h2>
+
+        <img
+          src="https://media-exp1.licdn.com/dms/image/C4E03AQG30SH9AqPxUw/profile-displayphoto-shrink_800_800/0/1650870486604?e=1668038400&v=beta&t=fV7fZSf7tx9G9zamre1TFV2drLn4xEs_LM9pfhBelGs"
+          alt="Chloé souriante"
+          className="chloé-main"
+        />
+        <p className="margin2r0 text-start">
+          « Agis dans ton lieu, pense avec le monde. » De retour au péi après 8️⃣
+          années en France et à l’étranger, j’ai choisi de faire mienne cette
+          citation d’Edouard Glissant en consacrant pleinement mes compétences
+          et mon énergie au développement de mon île, la Réunion 🌋 🇷🇪 Avec plus
+          de 5️⃣ années d’expérience dans le privé et le public, je suis une
+          jeune professionnelle avec des compétences reconnues en : •
+          conseil/aide à la décision institutionnelle et politique 🔛 • gestion
+          de projet, élaboration et mise en oeuvre de stratégies à fort impact
+          🎯 • modernisation de l'action publique et innovation sociale 🚀
+          Egalement présidente du "Laboratwar Nout Zidé - Think Tank Interactif
+          des Jeunes pour l'Avenir de la Réunion" 🌍, membre de l’association
+          “Retour Péi” ✈️ et créatrice d’un podcast 💯 % réunionnais 🎙
+        </p>
+      </article>
     </main>
   );
 }
