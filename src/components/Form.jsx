@@ -3,7 +3,7 @@ import React from "react";
 function Form() {
   return (
     <form action="form">
-      <form action="form" className="flex flex-col contact_form">
+      <form action="form" className="flex flex-col contact-form">
         <label htmlFor="nameInput">
           Nom et prénom
           <input
@@ -36,7 +36,7 @@ function Form() {
             placeholder="Saisir votre message"
           />
         </label>
-        <button type="submit" value="send" className="button_style blue">
+        <button type="submit" value="send" className="button-style blue">
           Envoyer
         </button>
       </form>
