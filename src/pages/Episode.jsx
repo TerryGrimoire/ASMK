@@ -37,22 +37,42 @@ function Episode() {
       />
       <p>{data.subEpisode[subId - 1].description}</p>
 
-      <div className="flex">
-        <button
-          type="button"
-          className="button-style margin0r1r"
-          onClick={handleClickMinus}
-        >
-          Épisode précédent
-        </button>
+      <div className="flex margin2r0">
+        {subId === "1" ? (
+          <button
+            type="button"
+            className="button-style second-color margin0r1r"
+            onClick={handleClickMinus}
+          >
+            ⬅️ Podcasts
+          </button>
+        ) : (
+          <button
+            type="button"
+            className="button-style second-color margin0r1r"
+            onClick={handleClickMinus}
+          >
+            Précédent
+          </button>
+        )}
 
-        <button
-          type="button"
-          className="button-style margin0r1r"
-          onClick={handleClickPlus}
-        >
-          Épisode suivant
-        </button>
+        {parseInt(subId, 10) === data.subEpisode.length ? (
+          <button
+            type="button"
+            className="button-style second-color margin0r1r"
+            onClick={handleClickPlus}
+          >
+            ↪️ Podcasts
+          </button>
+        ) : (
+          <button
+            type="button"
+            className="button-style second-color margin0r1r"
+            onClick={handleClickPlus}
+          >
+            Suivant
+          </button>
+        )}
       </div>
     </main>
   );
