@@ -17,6 +17,7 @@ function Burger() {
       >
         <img
           src={burger}
+          className="burger-icon"
           alt="menu de navigation sur le site internet - trois lignes de navigation"
         />
       </button>
