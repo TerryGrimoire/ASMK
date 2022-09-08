@@ -160,7 +160,9 @@ section {
   left: 0;
   animation: open 0.25s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
-
+.burger-icon {
+  width: 3rem;
+}
 .burger-button {
     width: 100%;
     font-size: 2rem;
