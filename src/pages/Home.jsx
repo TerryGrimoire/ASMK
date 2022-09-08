@@ -5,7 +5,13 @@ export default function Home() {
   return (
     <main>
       <h1>Atas Sintir Met Kask</h1>
-      <img src={logo} alt="logo" className="logo-main" />
+
+      <div className="container2">
+        <img src={logo} alt="logo" className="logo-main" />
+        <img src={logo} alt="logo" className="logo-main" />
+        <img src={logo} alt="logo" className="logo-main" />
+        <img src={logo} alt="logo" className="logo-main" />
+      </div>
       <p>
         A mi - chemin entre documentaire et journal de bord, Atas Sintir Met
         Kask (ASMK pour les intimes) est mon cahier de retour à la Réunion
