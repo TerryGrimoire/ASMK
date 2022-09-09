@@ -9,7 +9,7 @@ function Podcast() {
 
       <section className="podcast-section">
         {episodes.map((episode) => (
-          <div key={episode.id}>
+          <div key={episode.id} className="episode-container">
             <h2>{episode.title}</h2>
             <div className="flex-col">
               {episode.subEpisode &&

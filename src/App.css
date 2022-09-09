@@ -297,7 +297,7 @@ main {
   background-image:url(./assets/spotify.svg);
   background-repeat: no-repeat;
   background-position: 95% 50% ;
-  background-size: 2rem;
+  background-size: 1rem;
   text-align: start;
   background-color: var(--secondary-bg-color);
   color: var(--third-color);
@@ -406,6 +406,14 @@ width: 90%;
     display: initial;
   }
 
+  main {
+    padding: 1rem 15rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
 /********************************************************************* NAVBAR *********************************************************************/ 
 .navbar {
   padding: 2rem 0;
@@ -415,5 +423,37 @@ width: 90%;
 .navbar * {
   padding: 0rem 2rem;
 }
+/********************************************************************* HOME *********************************************************************/ 
   
+.home-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.home-social {
+  display: flex;
+}
+.home-social a {
+  padding: 0 5rem 0 0;
+}
+.home-social img {
+  width: 2rem;
+}
+/********************************************************************* HOME *********************************************************************/ 
+.podcast-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.episode-container {
+margin: 0 2rem;
+}
+
+.spotify {
+  background-position: 97% 50%;
+  background-size: 1.7rem;
+  width: 17.5rem;
+}
 }

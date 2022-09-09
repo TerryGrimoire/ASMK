@@ -1,40 +1,28 @@
 import React from "react";
 import logo from "../assets/logo.png";
-import facebook from "../assets/facebook.svg";
-import instagram from "../assets/instagram.svg";
 
 export default function Home() {
   return (
     <main>
       <h1>Atas Sintir Met Kask</h1>
 
-      <div className="container2">
-        <img src={logo} alt="logo" className="logo-main" />
-        <img src={logo} alt="logo" className="logo-main" />
-        <img src={logo} alt="logo" className="logo-main" />
-        <img src={logo} alt="logo" className="logo-main" />
-      </div>
-      <p>
-        A mi - chemin entre documentaire et journal de bord, Atas Sintir Met
-        Kask (ASMK pour les intimes) est mon cahier de retour à la Réunion
-        natale. Il vous invite à poser avec moi un regard nouveau sur la Réunion
-        d’aujourd’hui et à aller à la rencontre de celles et ceux qui feront la
-        Réunion de demain.
-      </p>
-      <a
-        className="flex align-center justify-start margin1r0"
-        href="https://www.instagram.com/atas_sintir_met_kask/"
-      >
-        <img src={instagram} alt="instagram" className="social-media" />
-        <p>@atas_sintir_met_kask</p>
-      </a>
-      <a
-        className="flex align-center justify-start margin1r0"
-        href="https://www.facebook.com/podcastasmk"
-      >
-        <img src={facebook} alt="facebook" className="social-media" />
-        <p>Atas Sintir Met Kask</p>
-      </a>
+      <section className="home-section">
+        <div className="container2">
+          <img src={logo} alt="logo" className="logo-main" />
+          <img src={logo} alt="logo" className="logo-main" />
+          <img src={logo} alt="logo" className="logo-main" />
+          <img src={logo} alt="logo" className="logo-main" />
+        </div>
+        <div>
+          <p>
+            A mi - chemin entre documentaire et journal de bord, Atas Sintir Met
+            Kask (ASMK pour les intimes) est mon cahier de retour à la Réunion
+            natale. Il vous invite à poser avec moi un regard nouveau sur la
+            Réunion d’aujourd’hui et à aller à la rencontre de celles et ceux
+            qui feront la Réunion de demain.
+          </p>
+        </div>
+      </section>
 
       <article className="center flex-col">
         <h2 className="center">Chloé Baillif</h2>
