@@ -12,7 +12,7 @@ function Fans() {
         <title>Atas Sintir Met Kask | Allé dit partou</title>
         <link rel="canonical" href="http://mysite.com/Fans" />
       </Helmet>
-      <h1>Iels parlent de nous</h1>
+      <h1>On parle de nous</h1>
       <article className="flex-col">
         <h2>Patati Patata</h2>
         <p>

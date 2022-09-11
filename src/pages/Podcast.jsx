@@ -15,19 +15,20 @@ function Podcast() {
         <link rel="canonical" href="http://mysite.com/Podcast" />
       </Helmet>
       <h1>Les podcasts</h1>
-
-      <p>
-        Tous nos podcasts sont disponibles à l'écoute sur plusieurs plateformes
-        telles que Deezer, Podcast Addict ou encore SoundCloud. Nous avons
-        abordé pour le moment 2 grandes thématiques : Le retour au péi et Nout
-        Langkozé Kréol.
-      </p>
+      <article>
+        <p>
+          Tous nos podcasts sont disponibles à l'écoute sur plusieurs
+          plateformes telles que Deezer, Podcast Addict ou encore SoundCloud.
+          Nous avons abordé pour le moment 2 grandes thématiques : Le retour au
+          péi et Nout Langkozé Kréol.
+        </p>
+      </article>
 
       <section className="podcast-section">
         {episodes.map((episode) => (
           <div key={episode.id} className="episode-container">
             <h2>{episode.title}</h2>
-            <div className="flex-col">
+            <div className="flex-col episodes-container2">
               {episode.subEpisode &&
                 episode.subEpisode.map((sub) => (
                   <Link

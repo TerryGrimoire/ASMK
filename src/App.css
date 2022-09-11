@@ -44,6 +44,12 @@ h1, h2 {
   font-family: var(--font-title);
 }
 
+h3 {
+  margin : 2rem 0 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
 a {
   color: initial;
   text-decoration: none;
@@ -114,6 +120,16 @@ section {
   font-weight: bold;
   width: 10rem;
 }
+
+.button-style2 {
+  border: none;
+  box-shadow: var(--box-shadow);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  width: 100%;
+  margin: 1rem 0;
+  }
 
 .third-color {
   background-color: var(--third-color);
@@ -219,6 +235,7 @@ main {
   justify-content: center;
   align-items: center;
   width: 100%;
+  height: calc(100vh - 111.79px);
 }
 
 .logo-main {
@@ -228,10 +245,17 @@ main {
   margin: 2rem 0;
 }
 
+.button-group {
+  padding: 2rem 0;
+}
+
 .chloé-main {
   width: 15rem;
+  height: 15rem;
   border-radius: 50%;
   box-shadow: var(--box-shadow);
+  margin: 3rem 0;
+  background-color: var(--secondary-bg-color);
 }
 
 .container2 {
@@ -262,7 +286,7 @@ main {
 }
 
 .container2 img:nth-child(5) {
-  transform: translate(0px, 0px) scale(1.1);
+  transform: translate(0px, -20px) scale(1.1);
   opacity: 1;
   z-index: 3;
 }
@@ -286,6 +310,24 @@ main {
   z-index: 2;
 }
 
+.fleche {
+  transform: rotate(90deg);
+  animation: pulse 2s infinite;
+  width: 3rem;
+}
+@keyframes pulse {
+	0% {
+		transform: scale(0.85) rotate(90deg);
+	}
+
+	70% {
+		transform: scale(1) rotate(90deg);
+	}
+
+	100% {
+		transform: scale(0.85) rotate(90deg);
+	}
+}
 /********************************************************************* Podcast *********************************************************************/ 
 .spotify {
   background-image:url(./assets/spotify.svg);
@@ -402,9 +444,13 @@ width: 90%;
 
   h1 {
     font-size: 5rem;
-    margin: 0 0 10rem ;
     border-bottom: none;
     background-color: transparent;
+    margin: 1rem 0;
+  }
+
+  h2 {
+    font-size: 3rem;
   }
 
   main {
@@ -417,8 +463,7 @@ width: 90%;
 
 /********************************************************************* NAVBAR *********************************************************************/ 
 .navbar {
-  padding: 2rem 0;
-
+  padding: 0;
 }
 
 .navbar * {
@@ -431,18 +476,19 @@ width: 90%;
   justify-content: center;
   align-items: center;
   width: 100%;
+  height: calc(100vh - 111.4px);
 }
 
 .container2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 4rem 0 ;
+  margin: 3rem 0 ;
 }
 
 .container2 .logo-main {
-  width: 25rem;
-  margin: 2rem 0;
+  width: 23vw;
+  margin: 1rem 0;
 }
 .home-social {
   display: flex;
@@ -453,19 +499,27 @@ width: 90%;
 .home-social img {
   width: 2rem;
 }
+
+article {
+  padding: 2rem 10rem;
+}
+
+article h2 {
+  margin-bottom: 1rem;
+}
+
 /********************************************************************* HOME *********************************************************************/ 
 .podcast-section {
-  width: 100%;
+  width: 78%;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
 }
 
 .episode-container {
-margin: 2rem;
+margin:2rem 0;
 border-radius: 1rem;
-padding: 0rem 2rem;
-box-shadow: var(--box-shadow);
-background-color: var(--secondary-bg-color);
+padding: 0rem 1.5rem;
 }
 
 .episode-container * {
@@ -474,13 +528,36 @@ background-color: var(--secondary-bg-color);
 
 .episode-container h2 {
   color: var(--main-bg-color);
+  background-color: var(--secondary-bg-color);
+  text-align: center;
+  margin: 0;
+  border-radius: 0.5rem;
 }
 
+.episode-container .episodes-container2 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.episode-container .episodes-container2 a {
+  margin: 0 2rem 0 0;
+}
 .spotify {
   background-position: 97% 50%;
   background-size: 1.7rem;
-  width: 17.5rem;
-  background-color: var(--main-bg-color);
-  color: var(--secondary-bg-color);
+  width: 16rem;
+  background-color: var(--secondary-bg-color);
+  color: var(--third-color);
+}
+
+iframe {
+  width: 100%;
+  margin: 2rem 0 0;
+}
+
+.home-article {
+  height: 100vh;
 }
 }

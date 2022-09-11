@@ -35,54 +35,56 @@ function Episode() {
         <meta charSet="utf-8" />
         <title>Atas Sintir Met Kask | {data.title} </title>
       </Helmet>
-      <h1>{data.title}</h1>
-      <h2>{data.subEpisode[subId - 1].subtitle}</h2>
-      <iframe
-        src={data.subEpisode[subId - 1].src}
-        frameBorder="0"
-        title={data.subEpisode[subId - 1].subtitle}
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-        loading="lazy"
-      />
-      <p>{data.subEpisode[subId - 1].description}</p>
+      <article className=" article-episode flex-col justify-center align-center ">
+        <h1>{data.title}</h1>
+        <h2>{data.subEpisode[subId - 1].subtitle}</h2>
+        <iframe
+          src={data.subEpisode[subId - 1].src}
+          frameBorder="0"
+          title={data.subEpisode[subId - 1].subtitle}
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy"
+        />
+        <p>{data.subEpisode[subId - 1].description}</p>
 
-      <div className="flex margin2r0">
-        {subId === "1" ? (
-          <button
-            type="button"
-            className="button-style second-color margin0r1r"
-            onClick={handleClickMinus}
-          >
-            ⬅️ Podcasts
-          </button>
-        ) : (
-          <button
-            type="button"
-            className="button-style second-color margin0r1r"
-            onClick={handleClickMinus}
-          >
-            Précédent
-          </button>
-        )}
+        <div className="flex margin2r0">
+          {subId === "1" ? (
+            <button
+              type="button"
+              className="button-style second-color margin0r1r"
+              onClick={handleClickMinus}
+            >
+              ⬅️ Podcasts
+            </button>
+          ) : (
+            <button
+              type="button"
+              className="button-style second-color margin0r1r"
+              onClick={handleClickMinus}
+            >
+              Précédent
+            </button>
+          )}
 
-        {parseInt(subId, 10) === data.subEpisode.length ? (
-          <button
-            type="button"
-            className="button-style second-color margin0r1r"
-            onClick={handleClickPlus}
-          >
-            ↪️ Podcasts
-          </button>
-        ) : (
-          <button
-            type="button"
-            className="button-style second-color margin0r1r"
-            onClick={handleClickPlus}
-          >
-            Suivant
-          </button>
-        )}
-      </div>
+          {parseInt(subId, 10) === data.subEpisode.length ? (
+            <button
+              type="button"
+              className="button-style second-color margin0r1r"
+              onClick={handleClickPlus}
+            >
+              ↪️ Podcasts
+            </button>
+          ) : (
+            <button
+              type="button"
+              className="button-style second-color margin0r1r"
+              onClick={handleClickPlus}
+            >
+              Suivant
+            </button>
+          )}
+        </div>
+      </article>
     </main>
   );
 }
