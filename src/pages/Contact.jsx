@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import Helmet from "react-helmet";
 import SocialMedia from "../components/SocialMedia";
 
 function Contact() {
@@ -8,6 +9,11 @@ function Contact() {
 
   return (
     <main className="flex flex-col align-center">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Atas Sintir Met Kask | Contact</title>
+        <link rel="canonical" href="http://mysite.com/Contact" />
+      </Helmet>
       <h1>Nous joindre</h1>
       <SocialMedia />
     </main>

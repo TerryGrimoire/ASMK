@@ -1,42 +1,65 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
+import Helmet from "react-helmet";
 import logo from "../assets/logo.png";
-import facebook from "../assets/facebook.svg";
-import instagram from "../assets/instagram.svg";
+import fleche from "../assets/fleche.png";
 
 export default function Home() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <main>
-      <h1>Atas Sintir Met Kask</h1>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Atas Sintir Met Kask | Accueil</title>
+        <link rel="canonical" href="http://mysite.com" />
+      </Helmet>
+      <section className="home-section">
+        <HashLink to="#podcast">
+          <img
+            src={fleche}
+            alt="fleche animée pour descendre"
+            className="fleche"
+          />
+        </HashLink>
+        <h1>Atas Sintir Met Kask</h1>
 
-      <div className="container2">
-        <img src={logo} alt="logo" className="logo-main" />
-        <img src={logo} alt="logo" className="logo-main" />
-        <img src={logo} alt="logo" className="logo-main" />
-        <img src={logo} alt="logo" className="logo-main" />
-      </div>
-      <p>
-        A mi - chemin entre documentaire et journal de bord, Atas Sintir Met
-        Kask (ASMK pour les intimes) est mon cahier de retour à la Réunion
-        natale. Il vous invite à poser avec moi un regard nouveau sur la Réunion
-        d’aujourd’hui et à aller à la rencontre de celles et ceux qui feront la
-        Réunion de demain.
-      </p>
-      <a
-        className="flex align-center justify-start margin1r0"
-        href="https://www.instagram.com/atas_sintir_met_kask/"
-      >
-        <img src={instagram} alt="instagram" className="social-media" />
-        <p>@atas_sintir_met_kask</p>
-      </a>
-      <a
-        className="flex align-center justify-start margin1r0"
-        href="https://www.facebook.com/podcastasmk"
-      >
-        <img src={facebook} alt="facebook" className="social-media" />
-        <p>Atas Sintir Met Kask</p>
-      </a>
+        <div className="container2">
+          <img src={logo} alt="logo" className="logo-main" />
+          <img src={logo} alt="logo" className="logo-main" />
+          <img src={logo} alt="logo" className="logo-main" />
+          <img src={logo} alt="logo" className="logo-main" />
+          <img src={logo} alt="logo" className="logo-main" />
+        </div>
+      </section>
 
-      <article className="center flex-col">
+      <article id="podcast" className="home-article center flex-col">
+        <h2 className="center">À propos du Podcast</h2>
+        <img
+          src="https://media1.giphy.com/media/TDlSjxwwM7WYqNf3fh/giphy.gif?cid=ecf05e47cebms3pfsdiwbt0gwfza0c526qzvdhaaievszcw0&rid=giphy.gif&ct=s"
+          alt="son de la voix"
+          className="chloé-main"
+        />
+        <p className="text-start">
+          A mi - chemin entre documentaire et journal de bord, Atas Sintir Met
+          Kask (ASMK pour les intimes) est mon cahier de retour à la Réunion
+          natale. Il vous invite à poser avec moi un regard nouveau sur la
+          Réunion d’aujourd’hui et à aller à la rencontre de celles et ceux qui
+          feront la Réunion de demain.
+        </p>
+
+        <div className="button-group">
+          <Link to="/Podcast">
+            <button type="button" className="button-style2">
+              Découvrir les podcasts
+            </button>
+          </Link>
+        </div>
+      </article>
+
+      <article className="center flex-col home-article">
         <h2 className="center">Chloé Baillif</h2>
 
         <img
@@ -44,7 +67,7 @@ export default function Home() {
           alt="Chloé souriante"
           className="chloé-main"
         />
-        <p className="margin2r0 text-start">
+        <p className="text-start">
           « Agis dans ton lieu, pense avec le monde. » De retour au péi après 8️⃣
           années en France et à l’étranger, j’ai choisi de faire mienne cette
           citation d’Edouard Glissant en consacrant pleinement mes compétences
@@ -58,6 +81,11 @@ export default function Home() {
           des Jeunes pour l'Avenir de la Réunion" 🌍, membre de l’association
           “Retour Péi” ✈️ et créatrice d’un podcast 💯 % réunionnais 🎙
         </p>
+        <Link to="/Fans">
+          <button type="button" className="button-style2">
+            En savoir plus
+          </button>
+        </Link>
       </article>
     </main>
   );

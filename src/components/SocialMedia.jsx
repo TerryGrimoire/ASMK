@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import spotify from "../assets/spotify.svg";
 import facebook from "../assets/facebook.svg";
 import instagram from "../assets/instagram.svg";
 
 function SocialMedia() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="container">
       <h2 className="margin2r0 center">
@@ -36,7 +39,7 @@ function SocialMedia() {
       </div>
 
       <p className="margin2r0">
-        Atas Sintir Met Kask est également disponible à lécoute sur d'autres
+        Atas Sintir Met Kask est également disponible à l'écoute sur d'autres
         plateformes telles que Deezer, Podcast Addict, SoundCloud. 🎧
       </p>
     </div>
