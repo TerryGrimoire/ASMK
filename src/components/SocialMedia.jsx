@@ -12,7 +12,7 @@ function SocialMedia() {
       <h2 className="margin2r0 center">
         Suivez-nous et contactez-nous sur les réseaux
       </h2>
-      <div className="flex-col align-start justify-center">
+      <div className="flex-col align-start justify-center desk-center">
         <a
           href="https://www.facebook.com/podcastasmk"
           className="flex align-center justify-center"

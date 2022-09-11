@@ -519,7 +519,6 @@ article h2 {
 .episode-container {
 margin:2rem 0;
 border-radius: 1rem;
-padding: 0rem 1.5rem;
 }
 
 .episode-container * {
@@ -547,7 +546,7 @@ padding: 0rem 1.5rem;
 .spotify {
   background-position: 97% 50%;
   background-size: 1.7rem;
-  width: 16rem;
+  width: 17rem;
   background-color: var(--secondary-bg-color);
   color: var(--third-color);
 }
@@ -555,6 +554,15 @@ padding: 0rem 1.5rem;
 iframe {
   width: 100%;
   margin: 2rem 0 0;
+}
+
+/********************************** Contact ******************************/
+
+.desk-center {
+  flex-direction: row;
+}
+.desk-center > *{
+  margin-right: 2rem ;
 }
 
 .home-article {
