@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import episodes from "../data/episodes";
 
 function Episode() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const { id, subId } = useParams();
   const navigate = useNavigate();
 

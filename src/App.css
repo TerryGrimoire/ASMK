@@ -7,7 +7,7 @@
   --secondary-bg-color : #191919;
   --third-color : #999999;
   --button-color: #0055FF;
-  --box-shadow: #191919 0px 1px 0px, #191919 0px 1px 4px, #191919 0px 1px 4px;
+  --box-shadow: rgba(0, 0, 0, 0.16) -1px -1px 1px 1px, rgba(0, 0, 0, 0.23) 0px 1px 1px;
   --font-title : 'Caveat', cursive;
   --font-text :'Josefin Sans', sans-serif;
 }
@@ -228,68 +228,54 @@ main {
 
 .container2 {
   position: relative;
-  width: 6rem;
+  width: 100%;
   height: 16rem;
-  margin-top: 12rem;
+  margin: 5rem 0;
   padding: 0 2rem;
   background: rgba(0, 0, 0, 0);
-  transform: rotate(-30deg) skew(25deg) scale(0.8);
+  transform: scale(0.9);
   transition: 0.5s;
 }
 .container2 img {
   position: absolute;
   width: 15rem;
   transition: 0.5s;
- 
-}
-.container2:hover img:nth-child(4) {
-  transform: translate(160px, -160px);
-  opacity: 1;
-}
-.container2:hover img:nth-child(3) {
-  transform: translate(120px, -120px);
-  opacity: 0.8;
-}
-.container2:hover img:nth-child(2) {
-  transform: translate(80px, -80px);
-  opacity: 0.6;
-}
-.container2:hover img:nth-child(1) {
-  transform: translate(40px, -40px);
-  opacity: 0.4;
+  animation: spin3D 5s ease-in-out 0s infinite;
+  animation-direction: alternate;
 }
 
-.container3 {
-  position: relative;
-  width: 60rem;
-  height: 16rem;
-  margin-top: 7rem;
-  padding: 0 2rem;
-  background: rgba(0, 0, 0, 0);
-  transform: rotate(0deg) skew(5deg) scale(0.8);
-  transition: 0.5s;
+@keyframes spin3D {
+  from {
+    transform: rotate3d(0.5,0.5,0.5, 360deg);
+  }
+  to{
+    transform: rotate3d(0deg);
+  }
 }
-.container3 img {
-  position: absolute;
-  width: 15rem;
-  transition: 0.5s;
- 
+
+.container2 img:nth-child(5) {
+  transform: translate(0px, 0px) scale(1.1);
+  opacity: 1;
+  z-index: 3;
 }
-.container3:hover img:nth-child(4) {
-  transform: translate(-160px, -160px);
+
+.container2 img:nth-child(4) {
+  transform: translate(50%, 0px) scale(0.6);
+  opacity: 1;
+  z-index: 2;
+}
+.container2 img:nth-child(3) {
+  transform: translate(100%, 0px) scale(0.45);
   opacity: 1;
 }
-.container3:hover img:nth-child(3) {
-  transform: translate(-120px, -120px);
-  opacity: 0.8;
+.container2 img:nth-child(2) {
+  transform: translate(-100%, 0px) scale(0.45);
+  opacity: 1;
 }
-.container3:hover img:nth-child(2) {
-  transform: translate(-80px, -80px);
-  opacity: 0.6;
-}
-.container3:hover img:nth-child(1) {
-  transform: translate(-40px, -40px);
-  opacity: 0.4;
+.container2 img:nth-child(1) {
+  transform: translate(-50%, 0px) scale(0.6);
+  opacity: 1;
+  z-index: 2;
 }
 
 /********************************************************************* Podcast *********************************************************************/ 
@@ -406,8 +392,15 @@ width: 90%;
     display: initial;
   }
 
+  h1 {
+    font-size: 5rem;
+    margin: 0 0 10rem ;
+    border-bottom: none;
+    background-color: transparent;
+  }
+
   main {
-    padding: 1rem 15rem;
+    padding: 1rem 10rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -424,12 +417,23 @@ width: 90%;
   padding: 0rem 2rem;
 }
 /********************************************************************* HOME *********************************************************************/ 
-  
 .home-section {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   justify-content: center;
   align-items: center;
+  width: 100%;
+}
+
+.container2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container2 .logo-main {
+  width: 25rem;
+  margin: 2rem 0;
 }
 .home-social {
   display: flex;
@@ -440,20 +444,35 @@ width: 90%;
 .home-social img {
   width: 2rem;
 }
+
 /********************************************************************* HOME *********************************************************************/ 
 .podcast-section {
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .episode-container {
-margin: 0 2rem;
+margin: 2rem;
+border-radius: 1rem;
+padding: 0rem 2rem;
+box-shadow: var(--box-shadow);
+background-color: var(--secondary-bg-color);
+}
+
+.episode-container * {
+  background-color: inherit;
+}
+
+.episode-container h2 {
+  color: var(--main-bg-color);
 }
 
 .spotify {
   background-position: 97% 50%;
   background-size: 1.7rem;
   width: 17.5rem;
+  background-color: var(--main-bg-color);
+  color: var(--secondary-bg-color);
 }
 }

@@ -1,11 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import episodes from "../data/episodes";
 
 function Podcast() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <main className="container">
       <h1>Les podcasts</h1>
+
+      <p>
+        Tous nos podcasts sont disponibles à l'écoute sur plusieurs plateformes
+        telles que Deezer, Podcast Addict ou encore SoundCloud. Nous avons
+        abordé pour le moment 2 grandes thématiques : Le retour au péi et Nout
+        Langkozé Kréol.
+      </p>
 
       <section className="podcast-section">
         {episodes.map((episode) => (

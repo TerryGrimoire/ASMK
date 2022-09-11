@@ -1,28 +1,37 @@
-import React from "react";
+import React, { useEffect } from "react";
 import logo from "../assets/logo.png";
 
 export default function Home() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <main>
-      <h1>Atas Sintir Met Kask</h1>
-
       <section className="home-section">
+        <h1>Atas Sintir Met Kask</h1>
+
         <div className="container2">
           <img src={logo} alt="logo" className="logo-main" />
           <img src={logo} alt="logo" className="logo-main" />
           <img src={logo} alt="logo" className="logo-main" />
           <img src={logo} alt="logo" className="logo-main" />
-        </div>
-        <div>
-          <p>
-            A mi - chemin entre documentaire et journal de bord, Atas Sintir Met
-            Kask (ASMK pour les intimes) est mon cahier de retour à la Réunion
-            natale. Il vous invite à poser avec moi un regard nouveau sur la
-            Réunion d’aujourd’hui et à aller à la rencontre de celles et ceux
-            qui feront la Réunion de demain.
-          </p>
+          <img src={logo} alt="logo" className="logo-main" />
         </div>
       </section>
+      <section className="desktop">
+        <div className="spinner-box">
+          <div className="leo-border-1">
+            <div className="leo-core-1" />
+          </div>
+        </div>
+      </section>
+      <p>
+        A mi - chemin entre documentaire et journal de bord, Atas Sintir Met
+        Kask (ASMK pour les intimes) est mon cahier de retour à la Réunion
+        natale. Il vous invite à poser avec moi un regard nouveau sur la Réunion
+        d’aujourd’hui et à aller à la rencontre de celles et ceux qui feront la
+        Réunion de demain.
+      </p>
 
       <article className="center flex-col">
         <h2 className="center">Chloé Baillif</h2>
