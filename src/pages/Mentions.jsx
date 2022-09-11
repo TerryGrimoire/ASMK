@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import Helmet from "react-helmet";
 
 function Mentions() {
   useEffect(() => {
@@ -19,6 +20,11 @@ function Mentions() {
 
   return (
     <div className="mentions-container">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Atas Sintir Met Kask | Mentions Légales</title>
+        <link rel="canonical" href="http://mysite.com/Mentions" />
+      </Helmet>
       <h2>Mentions Légales</h2>
       <p>
         <b>Client :</b> tout professionnel ou personne physique capable au sens

@@ -1,5 +1,8 @@
 import React, { useEffect } from "react";
+import { HashLink } from "react-router-hash-link";
+import Helmet from "react-helmet";
 import logo from "../assets/logo.png";
+import fleche from "../assets/fleche.png";
 
 export default function Home() {
   useEffect(() => {
@@ -7,6 +10,11 @@ export default function Home() {
   }, []);
   return (
     <main>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Atas Sintir Met Kask | Accueil</title>
+        <link rel="canonical" href="http://mysite.com" />
+      </Helmet>
       <section className="home-section">
         <h1>Atas Sintir Met Kask</h1>
 
@@ -18,6 +26,7 @@ export default function Home() {
           <img src={logo} alt="logo" className="logo-main" />
         </div>
       </section>
+
       <section className="desktop">
         <div className="spinner-box">
           <div className="leo-border-1">
@@ -25,6 +34,10 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <HashLink to="#podcast">
+        {" "}
+        <img src={fleche} alt="fleche animée pour descendre" />
+      </HashLink>
       <p>
         A mi - chemin entre documentaire et journal de bord, Atas Sintir Met
         Kask (ASMK pour les intimes) est mon cahier de retour à la Réunion

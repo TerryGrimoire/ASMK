@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
+import Helmet from "react-helmet";
 import episodes from "../data/episodes";
 
 function Podcast() {
@@ -8,6 +9,11 @@ function Podcast() {
   }, []);
   return (
     <main className="container">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Atas Sintir Met Kask | Podcasts</title>
+        <link rel="canonical" href="http://mysite.com/Podcast" />
+      </Helmet>
       <h1>Les podcasts</h1>
 
       <p>

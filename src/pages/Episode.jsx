@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import Helmet from "react-helmet";
 import episodes from "../data/episodes";
 
 function Episode() {
@@ -30,6 +31,10 @@ function Episode() {
   };
   return (
     <main>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Atas Sintir Met Kask | {data.title} </title>
+      </Helmet>
       <h1>{data.title}</h1>
       <h2>{data.subEpisode[subId - 1].subtitle}</h2>
       <iframe

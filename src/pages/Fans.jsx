@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import Helmet from "react-helmet";
 
 function Fans() {
   useEffect(() => {
@@ -6,6 +7,11 @@ function Fans() {
   }, []);
   return (
     <main>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Atas Sintir Met Kask | Allé dit partou</title>
+        <link rel="canonical" href="http://mysite.com/Fans" />
+      </Helmet>
       <h1>Iels parlent de nous</h1>
       <article className="flex-col">
         <h2>Patati Patata</h2>
