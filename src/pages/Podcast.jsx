@@ -27,6 +27,7 @@ function Podcast() {
       <section className="podcast-section">
         {episodes.map((episode) => (
           <div key={episode.id} className="episode-container">
+            <img src={episode.src} alt={episode.alt} />
             <h2>{episode.title}</h2>
             <div className="flex-col episodes-container2">
               {episode.subEpisode &&

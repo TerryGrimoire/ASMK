@@ -2,7 +2,8 @@ const episodes = [
   {
     id: 0,
     title: "Bande annonce ASMK",
-
+    src: "",
+    alt: "",
     subEpisode: [
       {
         subId: 1,
@@ -16,6 +17,8 @@ const episodes = [
   {
     id: 1,
     title: "Retour au péi",
+    src: "https://images.france.fr/zeaejvyq9bhj/6WF1c1FX5pVxfoaOHZsKy9/3e49bcdfddaccd61cf6c649717adfa75/montagne_mafate79_sentier_cap_noir_-_CREDIT_IRT_-_frog_974_photographies_dts_06_2018.jpg?w=1120&h=490&q=70&fl=progressive&fit=fill",
+    alt: "cirques de La Réunion",
     subEpisode: [
       {
         subId: 1,
@@ -43,6 +46,8 @@ const episodes = [
   {
     id: 2,
     title: "Nout Langkozé Kréol",
+    src: "https://www.villaote.com/wp-content/uploads/2018/07/creole-reunionnais.jpg",
+    alt: "dictons en créole réunionnais",
     subEpisode: [
       {
         subId: 1,
