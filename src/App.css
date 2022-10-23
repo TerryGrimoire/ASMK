@@ -224,7 +224,7 @@ section {
 
 main {
   padding: 1rem 3rem;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 /********************************************************************* HOME *********************************************************************/ 
@@ -237,6 +237,7 @@ main {
   width: 100%;
   height: calc(100vh - 111.79px);
 }
+
 
 .logo-main {
   width: 10rem;
