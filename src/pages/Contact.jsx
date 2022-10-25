@@ -12,7 +12,10 @@ function Contact() {
       <Helmet>
         <meta charSet="utf-8" />
         <title>Atas Sintir Met Kask | Contact</title>
-        <link rel="canonical" href="http://mysite.com/Contact" />
+        <link
+          rel="canonical"
+          href="https://atas-sintir-met-kask.netlify.app/Contact"
+        />
       </Helmet>
       <h1>Nous joindre</h1>
       <SocialMedia />

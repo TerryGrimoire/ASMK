@@ -153,6 +153,12 @@ section {
 .margin0r2r {
   margin: 0 2rem;
 }
+
+.margin2r {
+margin: 2rem;
+padding: 3rem 10rem;
+text-align: center;
+}
 .center {
   text-align: center;
   justify-content: center;
@@ -184,6 +190,7 @@ section {
     padding: 3rem 1rem;
     border: none;
     border-bottom: var(--secondary-bg-color) 1px solid;
+    font-family: var(--font-title);
 }
 
 @keyframes open {
@@ -473,6 +480,13 @@ footer .grimoire {
 
 .navbar * {
   padding: 0rem 2rem;
+  font-family: var(--font-title);
+  font-size: 2rem;
+  transition: 1s;
+}
+
+.navbar a:hover {
+  color: var(--button-color);
 }
 /********************************************************************* HOME *********************************************************************/ 
 .home-section {
