@@ -5,11 +5,18 @@ function Footer() {
   return (
     <footer className="flex-col justify-center align-center footer ">
       <p className="center">
-        Designé et développé par
-        <br /> Terry Grimoire
+        Make with ♥ by
+        <a
+          href="https://grimoire-numerique.re/"
+          target="_blank"
+          rel="noreferrer"
+          className="grimoire"
+        >
+          Grimoire Numérique <small>®</small>
+        </a>
       </p>
       <Link to="/Mentions">
-        <p className="small">Mentions Légales</p>
+        <small className="small">Mentions Légales</small>
       </Link>
     </footer>
   );
