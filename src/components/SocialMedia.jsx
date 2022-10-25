@@ -38,7 +38,7 @@ function SocialMedia() {
         </a>
       </div>
 
-      <p className="margin2r0">
+      <p className="margin2r">
         Atas Sintir Met Kask est également disponible à l'écoute sur d'autres
         plateformes telles que Deezer, Podcast Addict, SoundCloud. 🎧
       </p>
