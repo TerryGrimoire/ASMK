@@ -5,7 +5,7 @@ function Footer() {
   return (
     <footer className="flex-col justify-center align-center footer ">
       <p className="center">
-        Make with ♥ by
+        Made with ♥ by
         <a
           href="https://grimoire-numerique.re/"
           target="_blank"
